@@ -3,7 +3,7 @@ Distributed Crawling with RMQ
 
 ## Description
 
-This is a showcase for distributing scraping websites using multiple workers. The basic idea is to use RabbitMQ worker queue to schedule many pages to be scraped and handle scraping/parsing by running multiple workers simultaneously.
+This is a showcase for a distributed website crawler using one producer and multiple workers. The basic idea is to use RMQ's worker queue to schedule tasks for scraping/parsing many pages by running multiple workers simultaneously.
 
 ## Input
 
@@ -13,8 +13,8 @@ The input for this project is the UK Area Codes website:
 
 ## Output
 
-The worker crawlers scrape the passed url by the producer and parse the city/town along with their area codes.
+The worker crawlers scrape the passed url's passed by the producer and parse the city/town name along with their area codes. The workers run in parallel.
 
 ## Dependencies
 
-To run the code you need to setup RabbitMQ and install pika, requests and BeautifulSoup Python libraries.
+To run the code you need to setup RabbitMQ and also install pika, requests and BeautifulSoup Python libraries.
