@@ -27,16 +27,15 @@ conda create -n crawler python=3.7.2 anaconda
 
 conda activate crawler
 
+# Install required packages:
+
 pip install requests
 
 pip install BeautifulSoup4
 
-Pika is a pure-Python implementation of the AMQP 0-9-1 protocol:
-
 pip install pika
 
-
-#Steps to install RMQ in MacOS: https://www.rabbitmq.com/install-homebrew.html
+# Steps to install RMQ in MacOS: https://www.rabbitmq.com/install-homebrew.html
 
 brew update
 
@@ -45,11 +44,9 @@ brew install rabbitmq
 # To have launchd start rabbitmq now and restart at login:
 brew services start rabbitmq
 
-#Start producer:
+# Start crawling producer and workers:
 
 python producer.py
-
-#Start workers:
 
 python worker.py
 
