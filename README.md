@@ -35,7 +35,7 @@ pip install BeautifulSoup4
 
 pip install pika
 
-# Steps to install RMQ in MacOS: https://www.rabbitmq.com/install-homebrew.html
+## Steps to install RMQ in MacOS:
 
 brew update
 
