@@ -18,3 +18,42 @@ The worker crawlers scrape the passed url's passed by the producer and parse the
 ## Dependencies
 
 To run the code you need to setup RabbitMQ and also install pika, requests and BeautifulSoup Python libraries.
+
+Create a virtual environment for your crawling project:
+
+conda create -n crawler python=3.7.2 anaconda
+
+# Activate this environment, use
+
+conda activate crawler
+
+pip install requests
+
+pip install BeautifulSoup4
+
+Pika is a pure-Python implementation of the AMQP 0-9-1 protocol:
+
+pip install pika
+
+
+#Steps to install RMQ in MacOS: https://www.rabbitmq.com/install-homebrew.html
+
+brew update
+
+brew install rabbitmq
+
+# To have launchd start rabbitmq now and restart at login:
+brew services start rabbitmq
+
+#Start producer:
+
+python producer.py
+
+#Start workers:
+
+python worker.py
+
+
+# To deactivate an active environment, use
+conda deactivate
+
